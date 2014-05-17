@@ -14,10 +14,38 @@
 
 @implementation DCViewController
 
+NSArray *tableData;
+NSArray *flagsImages;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Initialize table data
+    tableData = [NSArray arrayWithObjects:@"England", @"France", @"USA", @"Spain", @"Mexico", @"Germany", @"Russia", @"Uruguay", @"China", @"Indonesia", @"Nigeria", @"Egypt", @"Japan", @"Colombia", nil];
+    
+    // Initialize flagsImages
+    flagsImages = [NSArray arrayWithObjects:@"england.jpg", @"france.jpg", @"usa.jpg", @"spain.jpg", @"mexico.jpg", @"germany.jpg", @"russia.jpg", @"uruguay.jpg", @"china.jpg", @"indonesia.jpg", @"nigeria.jpg", @"egypt.jpg", @"japan.jpg", @"colombia.jpg", nil];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *tableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+    }
+    
+    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[flagsImages objectAtIndex:indexPath.row]];
+    
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning
