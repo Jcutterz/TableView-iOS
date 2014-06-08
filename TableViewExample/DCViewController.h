@@ -10,4 +10,8 @@
 
 @interface DCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (copy, nonatomic) NSArray *countries;
+@property (copy, nonatomic) NSArray *countriesContinent;
+@property (copy, nonatomic) NSArray *flags;
+
 @end

@@ -21,7 +21,9 @@
 		BB3384E51927608E00FED9F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3384C71927608E00FED9F9 /* UIKit.framework */; };
 		BB3384ED1927608E00FED9F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB3384EB1927608E00FED9F9 /* InfoPlist.strings */; };
 		BB3384EF1927608E00FED9F9 /* TableViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3384EE1927608E00FED9F9 /* TableViewExampleTests.m */; };
-		D1FA77A219278E8E00FAC55C /* images in Resources */ = {isa = PBXBuildFile; fileRef = D1FA77A119278E8E00FAC55C /* images */; };
+		D158C74B194377FE00835023 /* DCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D158C74A194377FE00835023 /* DCTableViewCell.xib */; };
+		D158C74E194379B700835023 /* DCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D158C74D194379B700835023 /* DCTableViewCell.m */; };
+		D1FA77A419278FD100FAC55C /* images in Resources */ = {isa = PBXBuildFile; fileRef = D1FA77A319278FD100FAC55C /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,10 @@
 		BB3384EA1927608E00FED9F9 /* TableViewExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewExampleTests-Info.plist"; sourceTree = "<group>"; };
 		BB3384EC1927608E00FED9F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB3384EE1927608E00FED9F9 /* TableViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewExampleTests.m; sourceTree = "<group>"; };
-		D1FA77A119278E8E00FAC55C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		D158C74A194377FE00835023 /* DCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTableViewCell.xib; sourceTree = "<group>"; };
+		D158C74C194379B700835023 /* DCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTableViewCell.h; sourceTree = "<group>"; };
+		D158C74D194379B700835023 /* DCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTableViewCell.m; sourceTree = "<group>"; };
+		D1FA77A319278FD100FAC55C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +119,15 @@
 		BB3384C91927608E00FED9F9 /* TableViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				D1FA77A119278E8E00FAC55C /* images */,
+				D1FA77A319278FD100FAC55C /* images */,
 				BB3384D21927608E00FED9F9 /* DCAppDelegate.h */,
 				BB3384D31927608E00FED9F9 /* DCAppDelegate.m */,
 				BB3384D51927608E00FED9F9 /* Main.storyboard */,
 				BB3384D81927608E00FED9F9 /* DCViewController.h */,
 				BB3384D91927608E00FED9F9 /* DCViewController.m */,
+				D158C74C194379B700835023 /* DCTableViewCell.h */,
+				D158C74D194379B700835023 /* DCTableViewCell.m */,
+				D158C74A194377FE00835023 /* DCTableViewCell.xib */,
 				BB3384DB1927608E00FED9F9 /* Images.xcassets */,
 				BB3384CA1927608E00FED9F9 /* Supporting Files */,
 			);
@@ -232,8 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FA77A219278E8E00FAC55C /* images in Resources */,
+				D1FA77A419278FD100FAC55C /* images in Resources */,
 				BB3384DC1927608E00FED9F9 /* Images.xcassets in Resources */,
+				D158C74B194377FE00835023 /* DCTableViewCell.xib in Resources */,
 				BB3384CE1927608E00FED9F9 /* InfoPlist.strings in Resources */,
 				BB3384D71927608E00FED9F9 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +265,7 @@
 			files = (
 				BB3384D01927608E00FED9F9 /* main.m in Sources */,
 				BB3384DA1927608E00FED9F9 /* DCViewController.m in Sources */,
+				D158C74E194379B700835023 /* DCTableViewCell.m in Sources */,
 				BB3384D41927608E00FED9F9 /* DCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
